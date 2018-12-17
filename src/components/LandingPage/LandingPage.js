@@ -15,7 +15,7 @@ const LandingPage = () => {
             <span className="heading-primary-bottom">It's where we are</span>
           </h1>
           
-          <a href="#" className='btn btn-white'>Discover The Outdoors</a>
+          <a href="#" className='btn btn-white btn-animated'>Discover The Outdoors</a>
         </div>
         
       </header>
