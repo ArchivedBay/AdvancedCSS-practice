@@ -9,12 +9,13 @@ const LandingPage = () => {
           <img src="/images/logo-white.png" alt="Logo" className='logo' />
         </div>
 
-        <h1 className="heading-primary">
-          <span className="heading-primary-top">Outdoors</span>
-          <span className="heading-primary-bottom">It's where we are.</span>
-        </h1>
+        <div className="cta-container">
+          <h1 className="heading-primary">
+            <span className="heading-primary-top">Outdoors</span>
+            <span className="heading-primary-bottom">It's where we are.</span>
+          </h1>
+        </div>
         
-
       </header>
     </div>
   );

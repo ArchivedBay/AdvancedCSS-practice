@@ -27,26 +27,61 @@
 .logo { height: 35px }
 
 /* HERO STYLES */ 
+.cta-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
 }
 
 .heading-primary-top,
-.heading-primary-bottom { 
-  display: block;
-}
-
+.heading-primary-bottom { display: block }
 
 .heading-primary-top {
   font-size: 60px;
   letter-spacing: 35px;
   font-weight: 400;
+  animation: move-in-right 0.5s;
 }
+
 .heading-primary-bottom {
   font-size: 20px;
   letter-spacing: 17.4px;
   font-weight: 700;
+  animation: move-in-left 0.5s;
 }
 
+/* ANIMATION STYLES */
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes move-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
