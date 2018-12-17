@@ -12,8 +12,10 @@ const LandingPage = () => {
         <div className="cta-container">
           <h1 className="heading-primary">
             <span className="heading-primary-top">Outdoors</span>
-            <span className="heading-primary-bottom">It's where we are.</span>
+            <span className="heading-primary-bottom">It's where we are</span>
           </h1>
+          
+          <a href="#" className='btn btn-white'>Discover The Outdoors</a>
         </div>
         
       </header>

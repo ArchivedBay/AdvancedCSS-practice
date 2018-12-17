@@ -1,2 +1,61 @@
 @import './colors.scss';
 
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+  backface-visibility: hidden; /* removes the odd shaking effect from animations. */
+  position: relative;
+}
+.btn:hover  { 
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2) ; 
+}
+.btn:active { 
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2) ; 
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .3s ease;
+}
+.btn:hover::after {
+  transform: scale(1.4, 1.6);
+  opacity: 0;
+}
+
+
+.btn-white { 
+  background-color: #fff;
+  color: map-get($colors, primary-dark);
+  animation: move-in-bottom 0.4s;
+}
+.btn-white::after {
+  background-color: #fff; /* this is needed even though it's being set above. */
+}
+
+/* ANIMATION STYLES */
+/* for performance, try to stick to opacity and transform/translate when animating. */
+@keyframes move-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

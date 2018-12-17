@@ -38,6 +38,8 @@
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 30px;
 }
 
 .heading-primary-top,
@@ -57,7 +59,9 @@
   animation: move-in-left 0.5s;
 }
 
+
 /* ANIMATION STYLES */
+/* for performance, try to stick to opacity and transform/translate when animating. */
 @keyframes move-in-right {
   0% {
     opacity: 0;
