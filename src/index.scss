@@ -1,7 +1,9 @@
 @import './colors.scss';
 
-* { 
-  box-sizing: border-box; 
+*,
+*::before, 
+*::after {
+  box-sizing: inherit; /* forces inheritance of Border-Box since it's on body. */
   margin: 0;
   padding: 0;
 }
@@ -17,7 +19,7 @@ body {
   color: map-get($colors, copy);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  box-sizing: border-box;
 }
 
 a { text-decoration: none }
