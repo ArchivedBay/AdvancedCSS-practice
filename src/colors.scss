@@ -4,3 +4,13 @@ $colors: (
   primary-dark:   #28b485,
   copy:           #777
 );
+
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn 'unknown `#{$key}` entered.';
+  @return null;
+}

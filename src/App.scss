@@ -38,13 +38,13 @@
 }
 
 
-.btn-white { 
+.btn--white { 
   background-color: #fff;
-  color: map-get($colors, primary-dark);
+  color: color(primary-dark);
 }
-.btn-white::after { background-color: #fff } /* this is needed even though it's being set above. */
+.btn--white::after { background-color: #fff } /* this is needed even though it's being set above. */
 
-.btn-animated { 
+.btn--animated { 
   animation: move-in-bottom .4s ease-out .5s;
   animation-fill-mode: backwards; /* allows the button to be hidden initially */
  }
