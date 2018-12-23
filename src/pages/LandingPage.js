@@ -8,7 +8,7 @@ const LandingPage = () => {
         topText='Outdoors' 
         bottomText="It's where we are" 
       />
-      
+
     </div>
   );
 }
