@@ -41,7 +41,7 @@
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* again, fixes text shake */
   margin-bottom: 3rem;
 }
 
