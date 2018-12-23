@@ -1,6 +1,6 @@
 @import './colors.scss';
 .btn{
-  &:link,&:visited {
+  &:link, &:visited {
     text-transform: uppercase;
     padding: 1rem;
     display: inline-block;
@@ -36,21 +36,19 @@
     z-index: -1;
     transition: all .3s ease;
   }
+
+  &--white {
+    background-color: #fff;
+    color: color(primary-dark);
+  
+    &::after{ background-color: #fff } /* this is needed even though it's being set above. */
+  }
+
+  &--animated {
+    animation: move-in-bottom .4s ease-out .5s;
+    animation-fill-mode: backwards; /* allows the button to be hidden initially */
+  }
 }
-
-.btn--white { 
-  background-color: #fff;
-  color: color(primary-dark);
-
-  &::after{ background-color: #fff } /* this is needed even though it's being set above. */
-}
-
-
-.btn--animated { 
-  animation: move-in-bottom .4s ease-out .5s;
-  animation-fill-mode: backwards; /* allows the button to be hidden initially */
- }
-
 
 /* ANIMATION STYLES */
 @keyframes move-in-bottom {
