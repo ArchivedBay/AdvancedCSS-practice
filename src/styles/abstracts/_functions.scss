@@ -1,11 +1,4 @@
-$colors: (
-  shadow:         rgba(0,0,0,.2), 
-  primary-light:  #7ed56f,
-  primary-medium: #55c57a,
-  primary-dark:   #28b485,
-  copy:           #777
-);
-
+@import './_variables.scss';
 
 @function color($key) {
   @if map-has-key($colors, $key) {

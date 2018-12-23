@@ -1,4 +1,7 @@
-@import './colors.scss';
+@import '../abstracts/_functions.scss';
+@import '../base/_animations.scss';
+
+
 .btn{
   &:link, &:visited {
     text-transform: uppercase;
@@ -12,7 +15,8 @@
 
   &:hover{
     transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem color(shadow);
+    box-shadow: 0 1rem 2rem color(shadow); 
+    
     &::after{
       transform: scale(1.4, 1.6);
       opacity: 0;
@@ -40,25 +44,12 @@
   &--white {
     background-color: #fff;
     color: color(primary-dark);
-  
+
     &::after{ background-color: #fff } /* this is needed even though it's being set above. */
   }
 
   &--animated {
     animation: move-in-bottom .4s ease-out .5s;
-    animation-fill-mode: backwards; /* allows the button to be hidden initially */
+    animation-fill-mode: backwards; /* allows the button to be hidden initially by holding value of first keyframe of animation*/
   }
 }
-
-/* ANIMATION STYLES */
-@keyframes move-in-bottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-

@@ -1,30 +1,8 @@
-@import './colors.scss';
+// Abstracts
+@import './styles/abstracts/_functions.scss';
 
-*,
-*::before, 
-*::after {
-  box-sizing: inherit; /* forces inheritance of Border-Box since it's on body. */
-  margin: 0;
-  padding: 0;
-}
+// Base
+@import './styles/base/_animations.scss';
+@import './styles/base/_reset.scss';
 
-html { 
-  font-size: 62.5%; /* 10/16 -> .625 */
-} /* for calculating rem easier. NOTE explicitly changing it to px overwrites settings for accessibility, use % instead. */
 
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: map-get($colors, copy);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-}
-
-a { text-decoration: none }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
