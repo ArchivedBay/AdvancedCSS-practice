@@ -1,48 +1,50 @@
 @import './colors.scss';
+.btn{
+  &:link,&:visited {
+    text-transform: uppercase;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s ease;
+    backface-visibility: hidden; /* removes the odd shaking effect from animations. */
+    position: relative;
+  }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  padding: 1rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s ease;
-  backface-visibility: hidden; /* removes the odd shaking effect from animations. */
-  position: relative;
-}
-.btn:hover  { 
-  transform: translateY(-.3rem);
-  box-shadow: 0 1rem 2rem color(shadow); 
-}
-.btn:active { 
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem 1rem color(shadow); 
-}
+  &:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem color(shadow);
+    &::after{
+      transform: scale(1.4, 1.6);
+      opacity: 0;
+    } 
+  }
 
+  &:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem color(shadow); 
+  }
 
-.btn::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .3s ease;
+  &::after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s ease;
+  }
 }
-.btn:hover::after {
-  transform: scale(1.4, 1.6);
-  opacity: 0;
-}
-
 
 .btn--white { 
   background-color: #fff;
   color: color(primary-dark);
+
+  &::after{ background-color: #fff } /* this is needed even though it's being set above. */
 }
-.btn--white::after { background-color: #fff } /* this is needed even though it's being set above. */
+
 
 .btn--animated { 
   animation: move-in-bottom .4s ease-out .5s;

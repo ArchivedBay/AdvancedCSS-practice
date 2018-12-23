@@ -16,18 +16,18 @@
   /* clockwise */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo { 
+    height: 3.5rem;
+    animation: fade-in 0.5s;
+  }
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo { 
-  height: 3.5rem;
-  animation: fade-in 0.5s;
-}
 
 /* HERO STYLES */ 
 .cta-container {
@@ -43,23 +43,22 @@
   text-transform: uppercase;
   backface-visibility: hidden; /* again, fixes text shake */
   margin-bottom: 3rem;
+
+  &--top, &--bottom { display: block }
+  &--top {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+    animation: move-in-right 0.5s;
+  }
+  &--bottom {
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+    font-weight: 700;
+    animation: move-in-left 0.5s;
+  }
 }
 
-.heading-primary--top,
-.heading-primary--bottom { display: block }
-
-.heading-primary--top {
-  font-size: 6rem;
-  letter-spacing: 3.5rem;
-  font-weight: 400;
-  animation: move-in-right 0.5s;
-}
-.heading-primary--bottom {
-  font-size: 2rem;
-  letter-spacing: 1.75rem;
-  font-weight: 700;
-  animation: move-in-left 0.5s;
-}
 
 
 /* ANIMATION STYLES */
